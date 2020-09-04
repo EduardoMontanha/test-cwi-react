@@ -1,0 +1,31 @@
+.flag-icon {
+    position: relative;
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50%;
+    vertical-align: middle;
+}
+
+@media (min-width: 1024px) {
+    .flag-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        line-height: 1.5rem;
+    }
+}
+
+.flag-icon-br {
+    background-image: url(../assets/images/flags/br.svg);
+}
+
+.flag-icon-es {
+    background-image: url(../assets/images/flags/es.svg);
+}
+
+.flag-icon-us {
+    background-image: url(../assets/images/flags/us.svg);
+}
