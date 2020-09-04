@@ -26,8 +26,8 @@ $s5: #FFF5D6;
 /* ##################### */
 /* Fonts */
 /* ##################### */
-$font1: serif;
-$font2: sans-serif;
+$font1: Tangerine, serif;
+$font2: Ubuntu, sans-serif;
 
 
 /* ##################### */
@@ -89,6 +89,15 @@ button {
 
 .hide {
     display: none !important;
+}
+
+.card {
+    display: inline-block;
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 0 auto;
+    background-color: $s4;
+    box-sizing: border-box;
 }
 
 
