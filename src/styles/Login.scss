@@ -1,0 +1,45 @@
+#login {
+    min-height: calc(100vh - 158px);
+    padding: 2rem 0;
+}
+
+#login .card {
+    max-width: 400px;
+    display: block;
+    color: $c5;
+}
+
+#login form label {
+    margin-bottom:0.5rem;
+    display: block;
+}
+
+#login form input {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    background-color: $l4;
+    box-sizing: border-box;
+}
+
+#login form button {
+    display: block;
+    width: 100%;
+    padding: 1rem 0;
+    font-size: 1.2rem;
+    background-color: $c3;
+    color: $c5;
+}
+
+#login form button:disabled,
+#login form button:disabled:hover {
+    background-color: $s3;
+    cursor: not-allowed;
+}
+
+#login form button:hover {
+    background-color: $l3;
+}
