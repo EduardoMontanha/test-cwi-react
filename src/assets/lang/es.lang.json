@@ -6,6 +6,8 @@
     },
     "login": {
         "title": "Login",
+        "email": "E-mail",
+        "password": "Contraseña",
         "button": "Iniciar Sesión"
     }
 }
