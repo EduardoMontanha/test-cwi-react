@@ -36,7 +36,7 @@
 #login form button:disabled,
 #login form button:disabled:hover {
     background-color: $s3;
-    cursor: not-allowed;
+    cursor: default;
 }
 
 #login form button:hover {
