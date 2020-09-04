@@ -1,8 +1,17 @@
 import React from 'react';
+import Text from './components/Text';
 
 function Add () {
+    const pageId = "add";
+
     return (
-        <div>add</div>
+        <main>
+            <div className="container">
+                <h1>
+                    <Text pageId={pageId} tid="title" />
+                </h1>
+            </div>
+        </main>
     );
 }
 
