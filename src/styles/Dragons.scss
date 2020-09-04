@@ -1,0 +1,16 @@
+#dragons thead,
+#dragons tr {
+    border-bottom: 1px solid $s4;
+}
+
+#dragons th,
+#dragons td {
+    padding: 0.5rem 1rem;
+    vertical-align: middle;
+    text-align: left;
+}
+
+#dragons th:last-child,
+#dragons td:last-child {
+    text-align: right;
+}
