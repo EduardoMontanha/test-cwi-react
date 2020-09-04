@@ -84,6 +84,7 @@ header .nav-links {
     left: 0;
     width: 100vw;
     background-color: $c1;
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,.2);
 }
 
 header.active .nav-links {
@@ -112,18 +113,6 @@ header .nav-item button {
     border-radius: 0;
 }
 
-header .nav-item .lang-box {
-    display: flex;
-    justify-content: center;
-}
-
-header .nav-item .lang-box button {
-    display: inline-block;
-    width: auto;
-    padding: 0.5rem 1rem;
-    background-color: $c1;
-}
-
 
 /* ########################################## */
 /* Large Screens */
@@ -138,6 +127,7 @@ header .nav-item .lang-box button {
         position: relative;
         top: 0;
         width: auto;
+        box-shadow: none;
     }
 
     header .nav-item {
@@ -148,9 +138,5 @@ header .nav-item .lang-box button {
     header .nav-item button {
         background-color: $c1;
         color: $l3;
-    }
-
-    header .nav-item .lang-box {
-        display: none;
     }
 }
