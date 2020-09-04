@@ -1,6 +1,16 @@
-#dragons thead,
-#dragons tr {
-    border-bottom: 1px solid $s4;
+#dragons table {
+    border-radius: 10px;
+    background-color: rgba(9,12,2,.9);
+}
+
+#dragons thead {
+    border-bottom: 2px solid $c3;
+    font-size: 1.2rem;
+    color: $l3;
+}
+
+#dragons tr + tr {
+    border-top: 1px solid $s4;
 }
 
 #dragons th,
@@ -13,4 +23,18 @@
 #dragons th:last-child,
 #dragons td:last-child {
     text-align: right;
+}
+
+#dragons td:last-child {
+    white-space: nowrap;
+}
+
+#dragons td a button:first-child,
+#dragons td button {
+    background-color: inherit;
+    color: $c5;
+}
+
+#dragons td button:last-child  {
+    color: $c3;
 }
