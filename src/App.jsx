@@ -7,7 +7,7 @@ import {
 import AuthContext from './contexts/AuthContext';
 import { LanguageProvider } from './contexts/LanguageContext';
 import { NotificationContainer } from 'react-notifications';
-import PrivateRoute from './routes/PrivateRoute';
+import PrivateRoute from './routes/components/PrivateRoute';
 import Add from './routes/Add';
 import Dragon from './routes/Dragon';
 import Dragons from './routes/Dragons';
