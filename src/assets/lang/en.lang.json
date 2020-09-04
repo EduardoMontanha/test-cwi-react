@@ -1,5 +1,11 @@
 {
+    "header": {
+        "logout": "Logout",
+        "dragons": "Dragons",
+        "add": "Add"
+    },
     "login": {
-        "title": "Login"
+        "title": "Login",
+        "button": "Login"
     }
 }

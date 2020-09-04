@@ -1,5 +1,11 @@
 {
+    "header": {
+        "logout": "Sair",
+        "dragons": "Dragões",
+        "add": "Adicionar"
+    },
     "login": {
-        "title": "Logar"
+        "title": "Login",
+        "button": "Logar"
     }
 }

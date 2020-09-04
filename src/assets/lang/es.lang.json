@@ -1,5 +1,11 @@
 {
+    "header": {
+        "logout": "Salir",
+        "dragons": "Dragones",
+        "add": "Añadir"
+    },
     "login": {
-        "title": "Logare"
+        "title": "Login",
+        "button": "Iniciar Sesión"
     }
 }
