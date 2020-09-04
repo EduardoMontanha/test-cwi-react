@@ -87,6 +87,7 @@ button {
 /* Common Classes */
 /* ##################### */
 .container {
+    width: 100%;
     max-width: 1200px;
     padding: 0 1rem;
     margin: 0 auto;
@@ -126,10 +127,10 @@ button {
         width: 100vw;
         height: 100vh;
         opacity: 0.5;
-        background-image: url(../assets/images/logo-big.png);
+        background-image: url(../assets/images/background.png);
         background-repeat: no-repeat;
-        background-size: contain;
-        background-position-x: -50%;
+        background-size: 688px 822px;
+        background-position-x: -340px;
         z-index: -1;
     }
 }
