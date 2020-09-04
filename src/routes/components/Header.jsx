@@ -22,7 +22,7 @@ function Header() {
             <div className="container">
                 <Link className="logo" to="/"><img src={logo} alt="Logo" /></Link>
 
-                <button className="nav-bar-toggler" onClick={toggleMenu}>
+                <button className="nav-bar-toggler" onClick={() => toggleMenu()}>
                     <div id="burger-icon">
                         <div className="bar bar1"></div>
                         <div className="bar bar2"></div>
@@ -33,12 +33,12 @@ function Header() {
                 <nav className="nav-links">
                     <ul>
                         <li className="nav-item">
-                            <Link to="/">
+                            <Link to="/" onClick={() => toggleMenu()}>
                                 <Text pageId={pageId} tid="dragons" />
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/adicionar">
+                            <Link to="/adicionar" onClick={() => toggleMenu()}>
                                 <Text pageId={pageId} tid="add" />
                             </Link>
                         </li>
