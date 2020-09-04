@@ -1,0 +1,156 @@
+header {
+    position: fixed;
+    width: 100vw;
+    height: 80px;
+    z-index: 10;
+    background-color: $c1;
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,.2);
+}
+
+header .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+/* ===================== */
+/* Logo */
+/* ===================== */
+header .logo {
+    padding: 0.5rem 0;
+    display: inline-block;
+}
+
+header .logo img {
+    max-height: 60px;
+}
+
+
+/* ===================== */
+/* Burger Button */
+/* ===================== */
+header .nav-bar-toggler {
+    width: 60px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+header .nav-bar-toggler:focus {
+    outline: none;
+}
+
+header #burger-icon {
+    display: inline-block;
+    cursor: pointer;
+}
+
+header #burger-icon .bar {
+    width: 35px;
+    height: 4px;
+    background-color: $c5;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+header.active #burger-icon {
+    padding-left: 4px;
+}
+
+/* Rotate first bar */
+header.active #burger-icon .bar1 {
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+/* Fade out the second bar */
+header.active #burger-icon .bar2 {
+    opacity: 0;
+}
+/* Rotate last bar */
+header.active #burger-icon .bar3 {
+    transform: rotate(45deg) translate(-8px, -6px) ;
+}
+
+
+/* ===================== */
+/* Navigation */
+/* ===================== */
+header .nav-links {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100vw;
+    background-color: $c1;
+}
+
+header.active .nav-links {
+    display: block;
+}
+
+header .nav-item {
+    border-top: 1px solid $s4;
+}
+
+header .nav-item a,
+header .nav-item button {
+    display: block;
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: $c5;
+}
+
+header .nav-item a {
+    text-align: center;
+}
+
+header .nav-item button {
+    width: 100%;
+    background-color: $c3;
+    border-radius: 0;
+}
+
+header .nav-item .lang-box {
+    display: flex;
+    justify-content: center;
+}
+
+header .nav-item .lang-box button {
+    display: inline-block;
+    width: auto;
+    padding: 0.5rem 1rem;
+    background-color: $c1;
+}
+
+
+/* ########################################## */
+/* Large Screens */
+/* ########################################## */
+@media (min-width: 1024px) {
+    header .nav-bar-toggler {
+        display: none;
+    }
+
+    header .nav-links {
+        display: inline-block;
+        position: relative;
+        top: 0;
+        width: auto;
+    }
+
+    header .nav-item {
+        display: inline-block;
+        border: none;
+    }
+
+    header .nav-item button {
+        background-color: $c1;
+        color: $l3;
+    }
+
+    header .nav-item .lang-box {
+        display: none;
+    }
+}
