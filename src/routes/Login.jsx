@@ -6,10 +6,11 @@ import { useContext } from 'react';
 import AuthContext from '../contexts/AuthContext';
 
 
-function Login () {
+function Login() {
     const auth = useContext(AuthContext);
-    const [email, setEmail]= useState('');
-    const [password, setPassword]= useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const pageId = "login";
 
     let sampleEmail = "test@test.com";
     let samplePass = "12345";
@@ -34,28 +35,38 @@ function Login () {
 
     return (
         <main id="login">
-            <Text pageId="login" tid="title" />
+            <div className="container">
+                <div className="card">
+                    <h1>
+                        <Text pageId="login" tid="title" />
+                    </h1>
 
-            <form onSubmit={event => {
-                event.preventDefault();
-                handleSubmit();
-            }}>
-                <label>E-mail</label>
-                <input
-                    type="email"
-                    value={email}
-                    onChange={event => setEmail(event.target.value)}
-                    autoComplete="off" />
+                    <form onSubmit={event => {
+                        event.preventDefault();
+                        handleSubmit();
+                    }}>
+                        <label for="email"><Text pageId={pageId} tid={"email"} /></label>
+                        <input
+                            type="email"
+                            id="email"
+                            value={email}
+                            onChange={event => setEmail(event.target.value)}
+                            autoComplete="off" />
 
-                <label>Password</label>
-                <input
-                    type="password"
-                    value={password}
-                    onChange={event => setPassword(event.target.value)}
-                    autoComplete="off" />
+                        <label for="password"><Text pageId={pageId} tid={"password"} /></label>
+                        <input
+                            type="password"
+                            id="password"
+                            value={password}
+                            onChange={event => setPassword(event.target.value)}
+                            autoComplete="off" />
 
-                <button type="submit">Logar</button>
-            </form>
+                        <button type="submit" disabled={email === '' || password === ''}>
+                            <Text pageId={pageId} tid={"button"} />
+                        </button>
+                    </form>
+                </div>
+            </div>
         </main>
     );
 }
