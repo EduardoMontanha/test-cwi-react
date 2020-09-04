@@ -2,18 +2,18 @@ import React, { useState } from 'react';
 import {
     BrowserRouter as Router,
     Route,
-    Switch,
-    Link
+    Switch
 } from 'react-router-dom';
 import AuthContext from './contexts/AuthContext';
 import { LanguageProvider } from './contexts/LanguageContext';
 import { NotificationContainer } from 'react-notifications';
 import PrivateRoute from './routes/PrivateRoute';
-import LanguageSelector from './routes/components/LanguageSelector';
-import Login from './routes/Login';
+import Add from './routes/Add';
 import Dragon from './routes/Dragon';
 import Dragons from './routes/Dragons';
-import Header from './routes/components/Header';
+import Footer from './routes/components/Footer';
+import Login from './routes/Login';
+
 
 function App() {
     const [auth, setAuth] = useState(false);
@@ -21,20 +21,18 @@ function App() {
     return (
         <LanguageProvider>
             <AuthContext.Provider value={{ auth, setAuth }}>
-                <LanguageSelector />
-
                 <Router>
-                    <Header />
-
                     <Switch>
                         <Route path="/login" exact component={Login} />
                         <PrivateRoute exact path="/" component={Dragons} />
-                        <PrivateRoute path="/dragon" component={Dragon} />
+                        <PrivateRoute path="/dragao" component={Dragon} />
+                        <PrivateRoute path="/adicionar" component={Add} />
                     </Switch>
+
+                    <Footer />
+
+                    <NotificationContainer />
                 </Router>
-
-                <NotificationContainer />
-
             </AuthContext.Provider>
         </LanguageProvider>
     );
