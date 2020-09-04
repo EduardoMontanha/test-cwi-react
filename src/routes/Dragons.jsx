@@ -101,9 +101,9 @@ function Dragons() {
                     <table>
                         <thead>
                             <tr>
-                                <th>Nome</th>
-                                <th>Tipo</th>
-                                <th>Ações</th>
+                                <th><Text pageId={pageId} tid="th-name" /></th>
+                                <th><Text pageId={pageId} tid="th-type" /></th>
+                                <th><Text pageId={pageId} tid="th-actions" /></th>
                             </tr>
                         </thead>
 
@@ -121,25 +121,21 @@ function Dragons() {
                                                 <NavLink to={`/dragao/${dragon.id}`}>
                                                     <button>
                                                         <Icon path={mdiEye}
-                                                            title="Ver Mais"
-                                                            size={1}
-                                                            color="#ED1A3B" />
+                                                            title={<Text pageId={pageId} tid="cta-details" />}
+                                                            size={1} />
                                                     </button>
                                                 </NavLink>
 
-
                                                 <button onClick={() => modifyDragon(dragon.id, dragon.name, dragon.type)}>
                                                     <Icon path={mdiPencil}
-                                                        title="Editar"
-                                                        size={1}
-                                                        color="#ED1A3B" />
+                                                        title={<Text pageId={pageId} tid="cta-edit" />}
+                                                        size={1} />
                                                 </button>
 
                                                 <button onClick={() => removeDragon(dragon.id)}>
                                                     <Icon path={mdiTrashCanOutline}
-                                                        title="Deletar"
-                                                        size={1}
-                                                        color="#ED1A3B" />
+                                                        title={<Text pageId={pageId} tid="cta-delete" />}
+                                                        size={1} />
                                                 </button>
                                             </td>
                                         </tr>
