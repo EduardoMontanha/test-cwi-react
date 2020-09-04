@@ -9,5 +9,8 @@
         "email": "E-mail",
         "password": "Senha",
         "button": "Logar"
+    },
+    "dragons": {
+        "title": "Dragões"
     }
 }
