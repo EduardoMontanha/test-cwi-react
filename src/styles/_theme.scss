@@ -106,6 +106,15 @@ button {
     box-sizing: border-box;
 }
 
+.table-wrapper {
+    max-width: 100%;
+    overflow: auto;
+}
+
+.table-wrapper table {
+    margin: 0 auto;
+}
+
 
 /* ########################################## */
 /* Large Screens */
