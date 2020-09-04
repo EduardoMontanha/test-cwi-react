@@ -2,7 +2,6 @@ import React, { useContext } from 'react'
 import { Link, Redirect } from 'react-router-dom'
 import AuthContext from '../../contexts/AuthContext';
 import Text from './Text';
-import LanguageSelector from './LanguageSelector';
 import logo from '../../assets/images/logo.png';
 
 function Header() {
@@ -47,9 +46,6 @@ function Header() {
                             <button onClick={() => handleLogout()}>
                                 <Text pageId={pageId} tid="logout" />
                             </button>
-                        </li>
-                        <li className="nav-item">
-                            <LanguageSelector />
                         </li>
                     </ul>
                 </nav>
