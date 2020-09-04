@@ -1,0 +1,111 @@
+/* ##################### */
+/* Color Pallet */
+/* ##################### */
+/* Main */
+$c1: #090c02;
+$c2: #333333;
+$c3: #941c2f;
+$c4: #8A817C;
+$c5: #FFFDF7;
+
+/* Lighter */
+$l1: #273409;
+$l2: #474747;
+$l3: #BC243B;
+$l4: #9F9793;
+$l5: #FFFFFF;
+
+/* Shades */
+$s1: #000000;
+$s2: #1F1F1F;
+$s3: #781725;
+$s4: #776E69;
+$s5: #FFF5D6;
+
+
+/* ##################### */
+/* Fonts */
+/* ##################### */
+$font1: serif;
+$font2: sans-serif;
+
+
+/* ##################### */
+/* Common Elements */
+/* ##################### */
+body {
+    position: relative;
+    background-color: $s2;
+    font-family: $font2;
+    color: $c4;
+}
+
+header, main, section, aside, footer {
+    box-sizing: border-box;
+}
+
+section {
+    max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font1;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+a, button {
+    transition: all 350ms;
+}
+
+a {
+    text-decoration: none;
+}
+
+textarea:focus, input:focus, button:focus {
+    outline: none;
+}
+
+button {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* ##################### */
+/* Common Classes */
+/* ##################### */
+.container {
+    max-width: 1200px;
+    padding: 0 1rem;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.hide {
+    display: none !important;
+}
+
+
+/* ########################################## */
+/* Large Screens */
+/* ########################################## */
+@media (min-width: 1024px) {
+    body::before {
+        content: "";
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        opacity: 0.5;
+        background-image: url(../assets/images/logo-big.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position-x: -50%;
+        z-index: -1;
+    }
+}
