@@ -1,8 +1,8 @@
 import React, { Fragment } from "react";
 import { Route, Redirect } from "react-router-dom";
 import { useContext } from "react";
-import AuthContext from "../contexts/AuthContext";
-import Header from "./components/Header";
+import AuthContext from "../../contexts/AuthContext";
+import Header from "./Header";
 
 function PrivateRoute({ component: Component, ...rest }) {
     const auth = useContext(AuthContext)
