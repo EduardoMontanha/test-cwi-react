@@ -45,7 +45,7 @@ function Login() {
                         event.preventDefault();
                         handleSubmit();
                     }}>
-                        <label for="email"><Text pageId={pageId} tid={"email"} /></label>
+                        <label htmlFor="email"><Text pageId={pageId} tid={"email"} /></label>
                         <input
                             type="email"
                             id="email"
@@ -53,7 +53,7 @@ function Login() {
                             onChange={event => setEmail(event.target.value)}
                             autoComplete="off" />
 
-                        <label for="password"><Text pageId={pageId} tid={"password"} /></label>
+                        <label htmlFor="password"><Text pageId={pageId} tid={"password"} /></label>
                         <input
                             type="password"
                             id="password"
