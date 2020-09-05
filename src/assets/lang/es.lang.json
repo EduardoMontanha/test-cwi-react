@@ -9,5 +9,14 @@
         "email": "E-mail",
         "password": "Contraseña",
         "button": "Iniciar Sesión"
+    },
+    "dragons": {
+        "title": "Dragones",
+        "th-name": "Nombre",
+        "th-type": "Tipo",
+        "th-actions": "Acciones",
+        "cta-details": "Ver detalles",
+        "cta-edit": "Editar",
+        "cta-delete": "Eliminar"
     }
 }

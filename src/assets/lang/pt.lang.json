@@ -11,6 +11,12 @@
         "button": "Logar"
     },
     "dragons": {
-        "title": "Dragões"
+        "title": "Dragões",
+        "th-name": "Nome",
+        "th-type": "Tipo",
+        "th-actions": "Ações",
+        "cta-details": "Ver detalhes",
+        "cta-edit": "Editar",
+        "cta-delete": "Remover"
     }
 }

@@ -9,5 +9,13 @@
         "email": "E-mail",
         "password": "Password",
         "button": "Login"
+    },"dragons": {
+        "title": "Dragons",
+        "th-name": "Name",
+        "th-type": "Type",
+        "th-actions": "Actions",
+        "cta-details": "See details",
+        "cta-edit": "Edit",
+        "cta-delete": "Remove"
     }
 }
