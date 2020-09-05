@@ -78,17 +78,13 @@ header.active #burger-icon .bar3 {
 /* Navigation */
 /* ===================== */
 header .nav-links {
-    display: none;
+    display: block;
     position: absolute;
     top: 80px;
     left: 0;
     width: 100vw;
     background-color: $c1;
     box-shadow: 0 5px 5px 0 rgba(0,0,0,.2);
-}
-
-header.active .nav-links {
-    display: block;
 }
 
 header .nav-item {
@@ -123,7 +119,7 @@ header .nav-item button {
     }
 
     header .nav-links {
-        display: inline-block;
+        
         position: relative;
         top: 0;
         width: auto;
