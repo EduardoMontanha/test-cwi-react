@@ -4,7 +4,7 @@ import { NotificationManager } from 'react-notifications';
 import { NavLink } from 'react-router-dom';
 import Text from './components/Text'
 import Icon from '@mdi/react';
-import { mdiTrashCanOutline, mdiPencil, mdiEye, mdiFire, mdiWater, mdiTailwind, mdiStar } from '@mdi/js';
+import { mdiTrashCanOutline, mdiPencil, mdiEye } from '@mdi/js';
 
 
 function Dragons() {
@@ -20,22 +20,15 @@ function Dragons() {
         request
             .then(res => res.json())
             .then(data => {
-
                 //Sort by name
                 data.sort((a, b) => {
-                    if (a.name > b.name)
-                        return 1;
-                    if (a.name < b.name)
-                        return -1;
-                    return 0;
+                    return a.name.localeCompare(b.name);
                 });
 
                 setDragons(data);
-
-                // document.getElementById("loading").classList.add('hide');
             })
             .catch(err => {
-                NotificationManager.error('Algo deu errado: ' + err.message);
+                NotificationManager.error(<Text pageId={pageId} tid="notify-err-request" /> + err.message);
             });
     }
 
@@ -43,9 +36,6 @@ function Dragons() {
         setId(id);
         setName(name);
         setType(type);
-
-        // document.getElementById("edit-form").classList.remove('hide');
-        // document.getElementById("name").focus();
     }
 
     const handleModifyDragon = event => {
@@ -59,13 +49,12 @@ function Dragons() {
                     console.log(res)
                     if (res.ok) {
                         getDragonsList();
-                        // document.getElementById("edit-form").classList.add('hide');
-                        NotificationManager.success('Alterações salvas.');
+                        NotificationManager.success(<Text pageId={pageId} tid="notify-mod-suc" />);
                     }
                 })
                 .catch(err => {
-                    NotificationManager.error('Algo deu errado: ' + err.message);
-                })
+                    NotificationManager.error(<Text pageId={pageId} tid="notify-err-request" /> + err.message);
+                });
         }
     }
 
@@ -76,13 +65,13 @@ function Dragons() {
             .then(res => {
                 if (res.ok) {
                     getDragonsList();
-                    NotificationManager.success('Dragão excluído!');
+                    NotificationManager.success(<Text pageId={pageId} tid="notify-del-suc" />);
                 } else {
-                    NotificationManager.error('Ooops. Problemas com a rede.');
+                    NotificationManager.error(<Text pageId={pageId} tid="notify-err-network" />);
                 }
             })
             .catch(err => {
-                NotificationManager.error('Algo deu errado: ' + err.message);
+                NotificationManager.error(<Text pageId={pageId} tid="notify-err-request" /> + err.message);
             });
     }
 
@@ -146,7 +135,6 @@ function Dragons() {
                             }
                         </tbody>
                     </table>
-                    {/* <Loading /> */}
                 </div>
             </div>
         </main>
