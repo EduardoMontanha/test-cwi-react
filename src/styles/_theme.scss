@@ -35,6 +35,8 @@ $font2: Ubuntu, sans-serif;
 /* ##################### */
 body {
     position: relative;
+    max-width: 100vw;
+    overflow-x: hidden;
     background-color: $s2;
     font-family: $font2;
     color: $c4;
