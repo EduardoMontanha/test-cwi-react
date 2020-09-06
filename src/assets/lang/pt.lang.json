@@ -1,4 +1,28 @@
 {
+    "add": {
+        "title": "Criar Dragão",
+        "l-name": "Nome",
+        "l-type": "Tipo",
+        "button": "Criar",
+        "notify-err-name": "Dê um nome ao seu dragão.",
+        "notify-err-network": "Problemas com a rede! Tente novamente mais tarde.",
+        "notify-err-request": "Algo deu errado: ",
+        "notify-err-type": "Dê um tipo do seu dragão.",
+        "notify-suc-create": "Dragão criado!"
+    },
+    "dragons": {
+        "title": "Dragões",
+        "th-name": "Nome",
+        "th-type": "Tipo",
+        "th-actions": "Ações",
+        "cta-details": "Ver detalhes",
+        "cta-edit": "Editar",
+        "cta-delete": "Remover",
+        "notify-err-network": "Problemas com a rede! Tente novamente mais tarde.",
+        "notify-err-request": "Algo deu errado: ",
+        "notify-del-suc": "Dragão excluído!",
+        "notify-mod-suc": "Alterações salvas!"
+    },
     "header": {
         "logout": "Sair",
         "dragons": "Dragões",
@@ -9,14 +33,5 @@
         "email": "E-mail",
         "password": "Senha",
         "button": "Logar"
-    },
-    "dragons": {
-        "title": "Dragões",
-        "th-name": "Nome",
-        "th-type": "Tipo",
-        "th-actions": "Ações",
-        "cta-details": "Ver detalhes",
-        "cta-edit": "Editar",
-        "cta-delete": "Remover"
     }
 }

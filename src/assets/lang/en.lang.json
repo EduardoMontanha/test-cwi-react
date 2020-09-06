@@ -1,4 +1,28 @@
 {
+    "add": {
+        "title": "Create Dragon",
+        "l-name": "Name",
+        "l-type": "Type",
+        "button": "Create",
+        "notify-err-name": "Give your dragon a name.",
+        "notify-err-network": "Network problems! Try again later.",
+        "notify-err-request": "Something went wrong: ",
+        "notify-err-type": "Give a type for your dragon.",
+        "notify-suc-create": "Dragon created!"
+    },
+    "dragons": {
+        "title": "Dragons",
+        "th-name": "Name",
+        "th-type": "Type",
+        "th-actions": "Actions",
+        "cta-details": "See details",
+        "cta-edit": "Edit",
+        "cta-delete": "Remove",
+        "notify-err-network": "Network problems! Try again later.",
+        "notify-err-request": "Something went wrong: ",
+        "notify-del-suc": "Dragon removed!",
+        "notify-mod-suc": "Modifications saved!"
+    },
     "header": {
         "logout": "Logout",
         "dragons": "Dragons",
@@ -9,13 +33,5 @@
         "email": "E-mail",
         "password": "Password",
         "button": "Login"
-    },"dragons": {
-        "title": "Dragons",
-        "th-name": "Name",
-        "th-type": "Type",
-        "th-actions": "Actions",
-        "cta-details": "See details",
-        "cta-edit": "Edit",
-        "cta-delete": "Remove"
     }
 }
