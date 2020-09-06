@@ -6,14 +6,13 @@ import logo from '../../assets/images/logo.png';
 import useWindowSize from '../../hooks/useWindowSize';
 
 function Header() {
+    const size = useWindowSize();
     const auth = useContext(AuthContext);
     const [isMobile, setIsMobile] = useState(true);
     const [hideMenu, setHideMenu] = useState(true);
     const pageId = "header";
 
     useEffect(() => {
-        const size = useWindowSize();
-
         if (size.width >= 1024) {
             setIsMobile(false);
             setHideMenu(false);
@@ -21,7 +20,7 @@ function Header() {
             setIsMobile(true);
             setHideMenu(true);
         }
-    });
+    }, [size]);
 
     const handleLogout = () => {
         auth.setAuth(false);
@@ -29,10 +28,6 @@ function Header() {
     }
 
     function toggleMenu() {
-
-        console.log(isMobile, hideMenu, !hideMenu);
-        console.log(size)
-
         if (isMobile) {
             setHideMenu(!hideMenu);
         }
