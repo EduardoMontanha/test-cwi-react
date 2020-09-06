@@ -1,0 +1,47 @@
+#add form {
+    width: 100%;
+    max-width: 400px;
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 0 auto;
+    background-color: rgba(9,12,2,.9);
+    box-sizing: border-box;
+}
+
+#add label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: $l3;
+}
+
+#add input {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    background-color: $l2;
+    color: $c5;
+    box-sizing: border-box;
+}
+
+
+#add button {
+    display: block;
+    width: 100%;
+    padding: 1rem 0;
+    font-size: 1.2rem;
+    background-color: $c3;
+    color: $c5;
+}
+
+#add button:disabled,
+#add button:disabled:hover {
+    background-color: $s3;
+    cursor: not-allowed;
+}
+
+#add button:hover {
+    background-color: $l3;
+}
