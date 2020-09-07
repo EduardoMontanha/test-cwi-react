@@ -23,6 +23,13 @@
         "notify-del-suc": "Dragon removed!",
         "notify-mod-suc": "Modifications saved!"
     },
+    "errors": {
+        "404": {
+            "title": "Error 404",
+            "msg": "The page you are looking for does not exist or has been moved to another address.",
+            "cta": "Return"
+        }
+    },
     "header": {
         "logout": "Logout",
         "dragons": "Dragons",

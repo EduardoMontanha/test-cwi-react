@@ -23,6 +23,13 @@
         "notify-del-suc": "¡Dragón excluido!",
         "notify-mod-suc": "Cambios guardados!"
     },
+    "errors": {
+        "404": {
+            "title": "Error 404",
+            "msg": "La página que está buscando no existe o se ha movido a otra dirección.",
+            "cta": "Volver"
+        }
+    },
     "header": {
         "logout": "Salir",
         "dragons": "Dragones",
