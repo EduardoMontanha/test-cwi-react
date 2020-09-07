@@ -11,6 +11,7 @@ import PrivateRoute from './routes/components/PrivateRoute';
 import Add from './routes/Add';
 import Dragon from './routes/Dragon';
 import Dragons from './routes/Dragons';
+import { Error404 } from './routes/Errors';
 import Footer from './routes/components/Footer';
 import Login from './routes/Login';
 
@@ -23,10 +24,11 @@ function App() {
             <AuthContext.Provider value={{ auth, setAuth }}>
                 <Router>
                     <Switch>
-                        <Route path="/login" exact component={Login} />
+                        <Route path="/login" component={Login} />
                         <PrivateRoute exact path="/" component={Dragons} />
-                        <PrivateRoute path="/dragao" component={Dragon} />
+                        <PrivateRoute path="/dragao/:id" component={Dragon} />
                         <PrivateRoute path="/adicionar" component={Add} />
+                        <Route path="" component={Error404} />
                     </Switch>
 
                     <Footer />
