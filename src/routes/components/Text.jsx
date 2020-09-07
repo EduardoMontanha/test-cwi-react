@@ -1,14 +1,24 @@
 import { useContext } from 'react';
 import { LanguageContext } from '../../contexts/LanguageContext';
 
-function Text ({ pageId, tid}) {
+function Text ({ pageId, pageType, tid}) {
     const languageContext = useContext(LanguageContext);
-    
-    if (!!languageContext.langData[pageId] && languageContext.langData[pageId][tid]) {
-        return languageContext.langData[pageId][tid];
-    } else {
-        return `{${tid}}`;
+
+    if (!!languageContext && !!languageContext.langData && !!languageContext.langData[pageId]) {
+        let pageData = languageContext.langData[pageId];
+
+        if (pageType) {
+            if (!!pageData[pageType] && !!pageData[pageType][tid]) {
+                return pageData[pageType][tid];
+            }
+        } else {
+            if (!!pageData[tid]) {
+                return pageData[tid];
+            }
+        }
     }
+
+    return `{${tid}}`;
 };
 
 export default Text;
