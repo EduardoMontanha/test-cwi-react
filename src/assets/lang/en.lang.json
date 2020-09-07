@@ -10,6 +10,19 @@
         "notify-err-type": "Give a type for your dragon.",
         "notify-suc-create": "Dragon created!"
     },
+    "dragon": {
+        "title": "Dragon",
+        "l-name": "Name",
+        "l-type": "Type",
+        "l-created": "Creation date",
+        "cta-submit": "Update",
+        "cta-edit": "Edit",
+        "loading": "Loading...",
+        "updating": "Updating...",
+        "notify-err-network": "Network problems! Try again later.",
+        "notify-err-request": "Something went wrong: ",
+        "notify-suc-update": "Dragon updated!"
+    },
     "dragons": {
         "title": "Dragons",
         "th-name": "Name",
