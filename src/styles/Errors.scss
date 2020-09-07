@@ -1,0 +1,15 @@
+.errors {
+    text-align: center;
+}
+
+.errors p {
+    margin-bottom: 2rem;
+}
+
+.errors a  {
+    color: $c3;
+}
+
+.errors a:hover {
+    text-decoration: underline;
+}
