@@ -4,17 +4,19 @@ import Text from './components/Text';
 
 const pageId = "errors";
 
-function Error404 () {
+function Error404() {
     const pageType = "404"
 
     return (
-        <main>
-            <h1><Text pageId={pageId} pageType={pageType} tid="title" /></h1>
-            <p><Text pageId={pageId} pageType={pageType} tid="msg" /></p>
+        <main className="errors">
+            <div className="container">
+                <h1><Text pageId={pageId} pageType={pageType} tid="title" /></h1>
+                <p><Text pageId={pageId} pageType={pageType} tid="msg" /></p>
 
-            <Link to="/">
-                <Text pageId={pageId} pageType={pageType} tid="cta" />
-            </Link>
+                <Link to="/">
+                    <Text pageId={pageId} pageType={pageType} tid="cta" />
+                </Link>
+            </div>
         </main>
     );
 }
