@@ -4,6 +4,7 @@
         "l-name": "Name",
         "l-type": "Type",
         "button": "Create",
+        "creating": "Creating...",
         "notify-err-name": "Give your dragon a name.",
         "notify-err-network": "Network problems! Try again later.",
         "notify-err-request": "Something went wrong: ",
