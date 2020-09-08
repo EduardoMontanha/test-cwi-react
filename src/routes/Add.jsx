@@ -4,23 +4,26 @@ import Text from './components/Text';
 import { addDragon } from '../services/dragon.services';
 
 
-function Add () {
+function Add() {
     const [name, setName] = useState('');
     const [type, setType] = useState('');
+    const [creatingMsg, setCreatingMsg] = useState(false);
     const pageId = "add";
 
     const createDragon = () => {
         if (!!name && !!type) {
-            const request = addDragon(name, type);
+            setCreatingMsg(true);
 
+            const request = addDragon(name, type);
             request
                 .then(res => {
                     if (res.ok) {
-                        NotificationManager.success(<Text pageId={pageId} tid="notify-suc-create" />);
-
                         //Clean inputs
                         setName('');
                         setType('');
+                        setCreatingMsg(false);
+
+                        NotificationManager.success(<Text pageId={pageId} tid="notify-suc-create" />);
                     } else {
                         NotificationManager.error(<Text pageId={pageId} tid="notify-err-network" />);
                     }
@@ -68,7 +71,10 @@ function Add () {
                         autoComplete="off" />
 
                     <button type="submit" disabled={!name || !type}>
-                        <Text pageId={pageId} tid="button" />
+                        {creatingMsg ?
+                            <Text pageId={pageId} tid="creating" />
+                            : <Text pageId={pageId} tid="button" />
+                        }
                     </button>
                 </form>
             </div>
