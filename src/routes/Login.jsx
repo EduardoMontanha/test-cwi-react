@@ -20,11 +20,11 @@ function Login() {
             auth.setAuth(true);
         } else {
             if (email !== sampleEmail) {
-                NotificationManager.error('Email incorrect!');
+                NotificationManager.error(<Text pageId={pageId} tid={"notify-err-email"} />);
             }
 
             if (password !== samplePass) {
-                NotificationManager.error('Password incorrect!');
+                NotificationManager.error(<Text pageId={pageId} tid={"notify-err-password"} />);
             }
         }
     }
