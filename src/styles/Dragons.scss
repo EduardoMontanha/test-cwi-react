@@ -38,3 +38,10 @@
 #dragons td button:last-child  {
     color: $c3;
 }
+
+#dragons .loading {
+    display: block;
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 1.2rem;
+}
