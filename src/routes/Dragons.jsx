@@ -38,15 +38,13 @@ function Dragons() {
         setType(type);
     }
 
-    const handleModifyDragon = event => {
-        event.preventDefault();
+    const handleModifyDragon = () => {
 
         if (!!id && !!name && !!type) {
             const request = editDragon(id, name, type);
 
             request
                 .then(res => {
-                    console.log(res)
                     if (res.ok) {
                         getDragonsList();
                         NotificationManager.success(<Text pageId={pageId} tid="notify-mod-suc" />);
@@ -136,6 +134,9 @@ function Dragons() {
                         </tbody>
                     </table>
                 </div>
+                { dragons.length ?
+                    null :
+                    <p className="loading"><Text pageId={pageId} tid="loading" /></p> }
             </div>
         </main>
     );
