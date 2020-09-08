@@ -25,6 +25,7 @@
     border: none;
     border-radius: 5px;
     margin-bottom: 2rem;
+    font-size: 1rem;
     background-color: $c4;
     color: $c5;
     box-sizing: border-box;
@@ -35,7 +36,7 @@
 }
 
 #dragon input:disabled {
-    color: $c2;
+    color: $s2;
     background-color: $s4;
 }
 
