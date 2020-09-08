@@ -15,7 +15,6 @@ function Add () {
 
             request
                 .then(res => {
-                    console.log(res);
                     if (res.ok) {
                         NotificationManager.success(<Text pageId={pageId} tid="notify-suc-create" />);
 
