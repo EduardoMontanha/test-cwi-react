@@ -39,6 +39,69 @@
     color: $c3;
 }
 
+
+/* ##################### */
+/* Edit Form */
+/* ##################### */
+#dragons .updateForm {
+    max-width: 400px;
+    margin: 2rem auto 0;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: rgba(9,12,2,.9);
+    box-sizing: border-box;
+}
+
+#dragons label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: $l3;
+}
+
+#dragons span {
+    display: block;
+    margin-bottom: 2rem;
+}
+
+#dragons input {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    background-color: $c4;
+    color: $c5;
+    box-sizing: border-box;
+}
+
+#dragons input:last-of-type {
+    margin-bottom: 0;
+}
+
+#dragons input:disabled {
+    color: $c2;
+    background-color: $s4;
+}
+
+#dragons .updateForm button {
+    display: block;
+    width: 100%;
+    padding: 1rem 1rem;
+    margin-top: 2rem;
+    font-weight: bold;
+    background-color: $c3;
+    color: $c5;
+}
+
+#dragons .updateForm button:hover {
+    background-color: $l3;
+}
+
+
+/* ##################### */
+/* Loading */
+/* ##################### */
 #dragons .loading {
     display: block;
     padding: 2rem 0;
