@@ -58,6 +58,8 @@
         "title": "Login",
         "email": "E-mail",
         "password": "Password",
-        "button": "Login"
+        "button": "Login",
+        "notify-err-email": "Wrong e-mail!",
+        "notify-err-password": "Wrong password!"
     }
 }

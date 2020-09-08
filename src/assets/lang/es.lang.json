@@ -58,6 +58,8 @@
         "title": "Login",
         "email": "E-mail",
         "password": "Contraseña",
-        "button": "Iniciar Sesión"
+        "button": "Iniciar Sesión",
+        "notify-err-email": "¡Email inválido!",
+        "notify-err-password": "¡Contraseña invalida!"
     }
 }

@@ -58,6 +58,8 @@
         "title": "Login",
         "email": "E-mail",
         "password": "Senha",
-        "button": "Logar"
+        "button": "Logar",
+        "notify-err-email": "E-mail inválido!",
+        "notify-err-password": "Senha inválida!"
     }
 }
