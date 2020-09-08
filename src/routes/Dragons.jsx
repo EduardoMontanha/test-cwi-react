@@ -12,6 +12,8 @@ function Dragons() {
     const [id, setId] = useState(0);
     const [name, setName] = useState('');
     const [type, setType] = useState('');
+    const [showForm, setShowForm] = useState(false);
+    const [updatingMsg, setUpdatingMsg] = useState(false);
     const pageId = "dragons";
 
     const getDragonsList = () => {
@@ -36,17 +38,21 @@ function Dragons() {
         setId(id);
         setName(name);
         setType(type);
+        setShowForm(true);
     }
 
     const handleModifyDragon = () => {
 
         if (!!id && !!name && !!type) {
-            const request = editDragon(id, name, type);
+            setUpdatingMsg(true);
 
+            const request = editDragon(id, name, type);
             request
                 .then(res => {
                     if (res.ok) {
                         getDragonsList();
+                        setUpdatingMsg(false);
+                        setShowForm(false);
                         NotificationManager.success(<Text pageId={pageId} tid="notify-mod-suc" />);
                     }
                 })
@@ -137,6 +143,32 @@ function Dragons() {
                 { dragons.length ?
                     null :
                     <p className="loading"><Text pageId={pageId} tid="loading" /></p> }
+
+                <form className={`updateForm ${showForm ? '' : 'hide'}`} onSubmit={e => {
+                    e.preventDefault();
+                    handleModifyDragon();
+                }}>
+                    <label><Text pageId={pageId} tid="l-name" /></label>
+                    <input
+                        type="text"
+                        value={name}
+                        onChange={e => setName(e.target.value)}
+                        autoComplete="off" />
+
+                    <label><Text pageId={pageId} tid="l-type" /></label>
+                    <input
+                        type="text"
+                        value={type}
+                        onChange={e => setType(e.target.value)}
+                        autoComplete="off" />
+
+                    <button type="submit">
+                        {updatingMsg ?
+                            <Text pageId={pageId} tid="updating" />
+                            : <Text pageId={pageId} tid="cta-submit" />
+                        }
+                    </button>
+                </form>
             </div>
         </main>
     );
